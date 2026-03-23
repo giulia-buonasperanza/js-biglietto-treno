@@ -20,14 +20,26 @@ const etàInseritaNumero = parseInt(etàDelPasseggero);
 //if else l'età è minore di 18 applica lo sconto del 20%
 //else se l'età è maggiore di 65 anni applica lo sconto del 40%.
 
-if ((etàInseritaNumero >= 18) && (etàInseritaNumero < 65)) {
-    let prezzoFinaleBiglietto = prezzoBaseBiglietto;
-    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€`);
-} else if (etàInseritaNumero < 18) {
-    let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100) * 80);
-    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€`);
+//if ((etàInseritaNumero >= 18) && (etàInseritaNumero < 65)) {
+//    let prezzoFinaleBiglietto = prezzoBaseBiglietto;
+//    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Base`);
+//} else if (etàInseritaNumero < 18) {
+//    let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100) * 80);
+//    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Junior`);
 // età>=65    
-} else { 
+//} else { 
+//    let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100) * 60);
+//    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Senior`);
+//}
+
+//forse così più comodo.
+if (etàInseritaNumero < 18) {
+    let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100) * 80);
+    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Junior`); 
+}else if (etàInseritaNumero >= 65){ 
     let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100) * 60);
-    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€`);
+    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Senior`);
+} else {
+    let prezzoFinaleBiglietto = prezzoBaseBiglietto;
+    console.log(`${prezzoFinaleBiglietto.toFixed(2)}€ - Base`);
 }
