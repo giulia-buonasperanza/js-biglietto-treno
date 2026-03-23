@@ -21,7 +21,10 @@ const etàInseritaNumero = parseInt(etàDelPasseggero);
 //else se l'età è maggiore di 65 anni applica lo sconto del 40%.
 
 if( (etàInseritaNumero >= 18) && (etàInseritaNumero < 65) ) {
-    const prezzoFinaleBiglietto = prezzoBaseBiglietto;
+    let prezzoFinaleBiglietto = prezzoBaseBiglietto;
     console.log(`${prezzoFinaleBiglietto.toFixed(2)}€`);
+}else if (etàInseritaNumero < 18) {
+    let prezzoFinaleBiglietto = ((prezzoBaseBiglietto / 100)*80);
+     console.log(`${prezzoFinaleBiglietto.toFixed(2)}€`);
 }
 
