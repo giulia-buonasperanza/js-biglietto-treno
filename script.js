@@ -4,6 +4,12 @@
 //prompt per chiedere al passeggero quanti km percorre.
 //prezzo di partenza del biglietto è km*0,21€.
 
+const kmDaPercorrere = prompt('Km da percorrere');
+console.log(kmDaPercorrere);
+const kmInseritiNumero = parseInt(kmDaPercorrere);
+const prezzoBaseBiglietto = kmInseritiNumero * 0.21;
+console.log(`${prezzoBaseBiglietto.toFixed(2)}€`);
+
 
 //prompt per chiedere l'età del passeggero
 //if l'età è compresa tra i 18 e i 65 il prezzo del biglietto è calcolato.
